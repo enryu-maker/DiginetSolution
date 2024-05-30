@@ -1,0 +1,84 @@
+.contact-info{
+    margin-top: 100px;
+    font-weight: 500;
+}
+.icons{
+    color: #F8c607;
+    letter-spacing: .3cm;
+}
+.contact-info-list{
+    margin-top: 40px;
+}
+.title{
+    justify-content: flex-start;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.mail_address{
+    text-decoration: none;
+    position: relative;
+    box-sizing: border-box;
+    color: black;
+}
+.contact_text_style{
+    text-decoration: none;
+    position: relative;
+    box-sizing: border-box;
+    color: black;
+}
+.form-control{
+   background-color: #f3f3f3; 
+   border: none;
+   font-size: 16px;
+   color: #1d2122;
+   padding: 0 30px;
+    height: 60px;
+    font-weight: 600;
+    overflow: visible;
+    font-family: inherit;
+    line-height: inherit;
+    
+}
+
+.textarea{
+    background-color: #f3f3f3;
+    padding: 20px 30px 0px;
+    height: 200px;
+    padding-top: 20px;
+    resize: none;
+    
+}
+.btn{
+    border: 2px solid #f1f1f1;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0 45px;
+    background-color: #F8c607;
+    line-height: 60px;
+    height: 60px;
+    transition: .3s ease-out;
+    color: #1D2148;
+    border: none;
+    text-transform: none;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+
+
+
+
+ .map{
+       margin-top: 150px;
+       
+       height: 80%;
+       width: 100%;
+ 
+ }
