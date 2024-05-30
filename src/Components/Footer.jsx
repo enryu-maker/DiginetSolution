@@ -132,6 +132,21 @@ export default function Footer() {
                     Contact
                   </Link>
                 </li>
+                <li className="my-2">
+                  <Link
+                    to="/portfolio"
+                    className="footername"
+                    style={linkStyle}
+                    onMouseOver={(e) =>
+                      (e.currentTarget.style.color = linkHoverStyle.color)
+                    }
+                    onMouseOut={(e) =>
+                      (e.currentTarget.style.color = linkStyle.color)
+                    }
+                  >
+                    Portfolio
+                  </Link>
+                </li>
               </ul>
             </div>
             <div  className="col-md-4 col-sm-12 mt-5">
@@ -214,21 +229,7 @@ export default function Footer() {
                     Graphic Design
                   </Link>
                 </li>
-                <li className="my-2">
-                  <Link
-                    to="/branding"
-                    className="footername"
-                    style={linkStyle}
-                    onMouseOver={(e) =>
-                      (e.currentTarget.style.color = linkHoverStyle.color)
-                    }
-                    onMouseOut={(e) =>
-                      (e.currentTarget.style.color = linkStyle.color)
-                    }
-                  >
-                    Branding
-                  </Link>
-                </li>
+               
                 <li className="my-2">
                   <Link
                     to="/seoservices"

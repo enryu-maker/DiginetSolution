@@ -131,15 +131,7 @@ export default function Navbar() {
                     GRAPHIC DESIGN
                   </NavLink>
                 </li>
-                <li>
-                  <NavLink
-                    to="/branding"
-                    className="dropdown-item text-white"
-                    onClick={handleDropdownItemClick}
-                  >
-                    BRANDING
-                  </NavLink>
-                </li>
+               
                 <li>
                   <NavLink
                     to="/seoservices"
