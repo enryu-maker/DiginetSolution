@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 export default function Contactform() {
+  const [buttonHover, setButtonHover] = useState(false);
+
+  const handleMouseOver = () => {
+      setButtonHover(true);
+  };
+
+  const handleMouseOut = () => {
+      setButtonHover(false);
+  };
+
   const handleFormSubmit = async (event) => {
     event.preventDefault(); 
 
@@ -33,7 +43,7 @@ export default function Contactform() {
  
 
   return (
-    <div className="container-fluid mt-4 contact-info">
+    <div style={{fontFamily:'poppins'}} className="container-fluid mt-4 contact-info">
       <div className="row justify-content-center px-3">
         <div className="col-lg-6 col-md-10 col-sm-12">
           <div className="contact-info">
@@ -68,30 +78,74 @@ export default function Contactform() {
           </div>
           
           <form onSubmit={handleFormSubmit}>
-            <div className="contact-form mt-4">
-              <div className="row">
+          <div className="contact-form mt-4">
+            <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12 mb-4">
-                  <input type="text" className="form-control custom-input" placeholder="Enter Name" id="name" name="name" />
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Enter Name"
+                        id="name"
+                        name="name"
+                        style={{ border: 'none', borderBottom: '2px solid #ffc107' }}
+                    />
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12 mb-4">
-                  <input type="email" className="form-control custom-input" placeholder="Email" id="email" name="email" />
+                    <input
+                        type="email"
+                        className="form-control"
+                        placeholder="Email"
+                        id="email"
+                        name="email"
+                        style={{ border: 'none', borderBottom: '2px solid #ffc107' }}
+                    />
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12 mb-4">
-                  <input type="text" className="form-control custom-input" placeholder="Company name" id="companyname" name="companyname" />
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Company name"
+                        id="companyname"
+                        name="companyname"
+                        style={{ border: 'none', borderBottom: '2px solid #ffc107' }}
+                    />
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12 mb-4">
-                  <input type="tel" className="form-control custom-input" placeholder="Phone" id="phone" name="phone" />
+                    <input
+                        type="tel"
+                        className="form-control"
+                        placeholder="Phone"
+                        id="phone"
+                        name="phone"
+                        style={{ border: 'none', borderBottom: '2px solid #ffc107' }}
+                    />
                 </div>
                 <div className="col-12 mb-4">
-                  <textarea className="textarea form-control custom-input" id="help" name="help" placeholder="How Can We Help?"></textarea>
+                    <textarea
+                        className="textarea form-control"
+                        id="help"
+                        name="help"
+                        placeholder="How Can We Help?"
+                        style={{ border: 'none', borderBottom: '2px solid #ffc107' }}
+                    ></textarea>
                 </div>
                 <div className="col-12 text-center">
-                  <button type="submit" className="btn">
-                    Submit
-                  </button>
+                    <button
+                        type="submit"
+                        className="btn mb-2"
+                        onMouseOver={handleMouseOver}
+                        onMouseOut={handleMouseOut}
+                        style={{
+                            backgroundColor: buttonHover ? '#ffc107' : 'initial',
+                            color: buttonHover ? 'white' : 'initial',
+                            transition: 'background-color 0.3s, color 0.3s',
+                        }}
+                    >
+                        Submit
+                    </button>
                 </div>
-              </div>
             </div>
+        </div>
           </form>
         </div>
         <div className="col-lg-5 col-md-10 col-sm-12 contact-maps mt-4 mt-lg-0">
@@ -101,3 +155,4 @@ export default function Contactform() {
     </div>
   )
 }
+

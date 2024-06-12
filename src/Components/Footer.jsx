@@ -1,7 +1,3 @@
-
-
-
-
 import React from "react";
 import { Link } from "react-router-dom";
 import footerlogo from '../Images/footer1.png'
@@ -10,6 +6,8 @@ export default function Footer() {
   const footerStyle = {
     backgroundColor: "#343a40",
     color: "#b8c1ec",
+    fontFamily:'Rajdhani'
+
   };
 
   const titleStyle = {
@@ -84,9 +82,9 @@ export default function Footer() {
             </div>
             <div className="col-md-4 col-sm-12 mt-5">
               <h4 className="text-center" style={titleStyle}>
-                OUR PAGES
+                QUICK LINKS
               </h4>
-              <ul className="list-unstyled mt-4 text-center">
+              <ul style={{marginLeft:'20px'}} className="list-unstyled mt-4 text-center">
                 <li className="my-2">
                   <Link
                     to="/about"
@@ -102,21 +100,7 @@ export default function Footer() {
                     About us
                   </Link>
                 </li>
-                <li className="my-2">
-                  <Link
-                    to="/services"
-                    className="footername"
-                    style={linkStyle}
-                    onMouseOver={(e) =>
-                      (e.currentTarget.style.color = linkHoverStyle.color)
-                    }
-                    onMouseOut={(e) =>
-                      (e.currentTarget.style.color = linkStyle.color)
-                    }
-                  >
-                    Services
-                  </Link>
-                </li>
+                
                 <li className="my-2">
                   <Link
                     to="/contact"
@@ -264,7 +248,7 @@ export default function Footer() {
             </div>
           </div>
           <div
-            className="row text-white p-4"
+            className="row text-white p-1"
             style={{ backgroundColor: "black" }}
           >
             <div className="col-12 text-center">

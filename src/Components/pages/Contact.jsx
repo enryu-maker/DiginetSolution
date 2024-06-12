@@ -1,6 +1,6 @@
 import React from 'react';
-import contactimg from '../Images/Banner diginet.png';
-import Contactform from './Contactform';
+import contactimg from '../../Images/Banner diginet.png';
+import Contactform from '../Contactform';
 
 export default function Contact() {
   
