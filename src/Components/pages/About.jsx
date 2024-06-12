@@ -177,7 +177,7 @@ export default function About() {
                 <div>Akshay Dhumal </div>
                 <div className="details">
                   <div>CHIEF EXECUTIVE OFFICER</div>
-                  <div><a href="https://www.linkedin.com/in/ceo-profile" target="_blank" rel="noopener noreferrer">View Profile</a></div>
+                  <div><a href="https://www.linkedin.com/in/akshay-dhumal-529167137?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">View Profile</a></div>
                 </div>
               </div>
             </div>
@@ -186,10 +186,10 @@ export default function About() {
             <div className="image-container">
               <img data-aos="fade-down-left" src={cof} alt="Co-Founder" className="img-fluid" style={fixedImageStyle} />
               <div className="image-text">
-                <div>Miss Dhumal</div>
+                <div>Kiran Ubale</div>
                 <div className="details">
                   <div>CHIEF GROWTH OFFICER</div>
-                  <div><a href="https://www.linkedin.com/in/co-founder-profile" target="_blank" rel="noopener noreferrer">View Profile</a></div>
+                  <div><a href="https://www.linkedin.com/in/kiran-ubale-56323b1ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">View Profile</a></div>
                 </div>
               </div>
             </div>
