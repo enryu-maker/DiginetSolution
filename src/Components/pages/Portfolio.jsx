@@ -2,8 +2,8 @@
 
 
 import React from 'react';
-import pimg1 from '../Images/services/portfolioimg1.png';
-import pimg2 from '../Images/services/portfolioimg2.png';
+import pimg1 from '../../Images/services/portfolioimg1.png';
+import pimg2 from '../../Images/services/portfolioimg2.png';
 
 export default function Portfolio() {
   return (

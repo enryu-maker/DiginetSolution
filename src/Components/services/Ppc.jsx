@@ -1,16 +1,14 @@
-
-
-
 import React from 'react';
-
 import img from '../../Images/Images';
+import { color } from 'framer-motion';
 
-const Ppc = () => {
-const {sharesocial, ppcbanner, ppcservice,ppcflow} =img;
+const SocialMediaFeatures = () => {
+ 
+  const {sharesocial, ppcbanner, ppcservice,ppcflow} =img;
 
   const containerStyle = {
-    marginTop: '3rem',
-    marginBottom: '3rem',
+    marginTop: '1rem',
+    marginBottom: '1rem',
   };
 
   const imageStyle = {
@@ -34,7 +32,7 @@ const {sharesocial, ppcbanner, ppcservice,ppcflow} =img;
 
   const iconStyle = {
     fontSize: '2.5rem',
-    color: '#007bff',
+    color: '#FFC107',
     marginBottom: '1rem',
   };
 
@@ -55,127 +53,154 @@ const {sharesocial, ppcbanner, ppcservice,ppcflow} =img;
     fontWeight: '300',
   };
 
+  const bannerTextStyle = {
+    position: 'absolute',
+    top: '50%',
+    left: '10%',
+    transform: 'translateY(-50%)',
+    color: 'white',
+    textAlign: 'left',
+  };
+
+  const bannerTextHeadingStyle = {
+    fontSize: '1.5rem',
+    color:'#FFC107',
+    marginBottom: '5px',
+    fontFamily:'Rajdhani'
+  };
+
+  const bannerTextSubHeadingStyle = {
+    fontSize: '2.5rem',
+    fontWeight: 'bold',
+    fontFamily:'Rajdhani'
+  };
+
+  const features = [
+    {
+      icon: 'fas fa-lightbulb',
+      title: 'AN EMPHASIS ON DATA',
+    },
+    {
+      icon: 'fas fa-chart-line',
+      title: 'RESULT DRIVEN',
+    },
+    {
+      icon: 'fas fa-paint-brush',
+      title: 'CERTIFIED EXPERTS',
+    },
+    {
+      icon: 'fas fa-users',
+      title: 'ON-TIME DELIVERY',
+    },
+    {
+      icon: 'fas fa-bullhorn',
+      title: 'PERFORMANCE TRACKING',
+      
+    },
+  ];
+
   return (
     <>
-
-<div className="col-12">
-          <img 
-            src={ppcbanner} 
-            alt="Banner" 
-            className="img-fluid"
-            style={{ height: '70vh', width: '100%' }}
-          />
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .banner-text-heading {
+              font-size: 10px !important;
+            }
+            .banner-text-subheading {
+              font-size: 1rem !important;
+            }
+          }
+        `}
+      </style>
+      <div className="position-relative">
+        <img
+          src={ppcbanner}
+          alt="Banner"
+          className="img-fluid"
+          style={{ width: '100%' }}
+        />
+        <div style={bannerTextStyle}>
+          <h1 style={{ ...bannerTextHeadingStyle }} className="banner-text-heading">Welcome to Our Company</h1>
+          <p style={{ ...bannerTextSubHeadingStyle }} className="banner-text-subheading">PPC MANAGEMENT SERVICES</p>
         </div>
-
-
-    
+      </div>
       <div className="container" style={containerStyle}>
         <div className="row align-items-center">
-          
           <div className="col-md-6">
-  <img
-    src={sharesocial}
-    alt="Social Media Marketing"
-    style={{ ...imageStyle, width: '500px', height: '500px' }}
-  />
-</div>
-
+            <img
+              src={sharesocial}
+              alt="Social Media Marketing"
+              style={{ ...imageStyle, width: '500px', height: '500px' }}
+            />
+          </div>
           <div className="col-md-6">
-            <h2 style={headingStyle} className="mb-4 text-dark">PPC MANAGEMENT</h2>
+            <h2 style={headingStyle} className="mb-4 text-dark">PPC MANAGEMENNT</h2>
             <p style={textStyle}>
             Hire the best PPC agency to get maximum conversions with lower costs on Google & Facebook
             </p>
-            <p style={{textAlign:'justify'}}>If you're searching for a fast rate of investment (ROI), you'll need to work with a result-oriented PPC marketing agency. SpanDigit Social is a Digital Marketing Agency that has expertise in creating effective campaigns in Google Ads, Bing Ads, social media, and many more platforms.</p>
-          <p style={{textAlign:"justify"}}>While Search Engine Optimization (SEO) is an incredible approach for long-term development, once in a while you truly need a fast lift. SpanDigit offers PPC management services, guaranteeing that the money you spend is made to work for your business</p>
+            <p style={{ textAlign: 'justify' }}>
+            If you're searching for a fast rate of investment (ROI), you'll need to work with a result-oriented PPC marketing agency. SpanDigit Social is a Digital Marketing Agency that has expertise in creating effective campaigns in Google Ads, Bing Ads, social media, and many more platforms.
+            </p>
+            <p style={{ textAlign: 'justify' }}>
+            While Search Engine Optimization (SEO) is an incredible approach for long-term development, once in a while you truly need a fast lift. SpanDigit offers PPC management services, guaranteeing that the money you spend is made to work for your business
+            </p>
           </div>
         </div>
       </div>
       <div className="container" style={containerStyle}>
         <h2 style={headingStyle} className="text-center">Our Key Features</h2>
         <div className="row">
-          <div className="col-md-4">
-            <div
-              style={cardStyle}
-              className="card"
-              onMouseEnter={(e) => (e.currentTarget.style.transform = cardHoverStyle.transform)}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = 'none')}
-            >
-              <i className="fas fa-lightbulb" style={iconStyle}></i>
-              <h4 style={titleStyle}>AN EMPHASIS ON DATA</h4>
-              {/* <p style={textStyle}>Providing engaging content</p> */}
+          {features.slice(0, 3).map((feature, index) => (
+            <div className="col-md-4" key={index}>
+              <div
+                style={cardStyle}
+                className="card"
+                onMouseEnter={(e) => (e.currentTarget.style.transform = cardHoverStyle.transform)}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = 'none')}
+              >
+                <i className={feature.icon} style={iconStyle}></i>
+                <h4 style={titleStyle}>{feature.title}</h4>
+                <p style={textStyle}>{feature.description}</p>
+              </div>
             </div>
-          </div>
-          <div className="col-md-4">
-            <div
-              style={cardStyle}
-              className="card"
-              onMouseEnter={(e) => (e.currentTarget.style.transform = cardHoverStyle.transform)}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = 'none')}
-            >
-              <i className="fas fa-chart-line" style={iconStyle}></i>
-              <h4 style={titleStyle}>RESULT DRIVEN</h4>
-              {/* <p style={textStyle}>Social efforts and track metrics</p> */}
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div
-              style={cardStyle}
-              className="card"
-              onMouseEnter={(e) => (e.currentTarget.style.transform = cardHoverStyle.transform)}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = 'none')}
-            >
-              <i className="fas fa-paint-brush" style={iconStyle}></i>
-              <h4 style={titleStyle}>CERTIFIED EXPERTS</h4>
-              {/* <p style={textStyle}>Content that catches user’s attention</p> */}
-            </div>
-          </div>
+          ))}
         </div>
         <div className="row justify-content-center">
-          <div className="col-md-4">
-            <div
-              style={cardStyle}
-              className="card"
-              onMouseEnter={(e) => (e.currentTarget.style.transform = cardHoverStyle.transform)}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = 'none')}
-            >
-              <i className="fas fa-users" style={iconStyle}></i>
-              <h4 style={titleStyle}>ON-TIME DELIVERY</h4>
-              {/* <p style={textStyle}>Analyzing target audience</p> */}
+          {features.slice(3).map((feature, index) => (
+            <div className="col-md-4" key={index + 3}>
+              <div
+                style={cardStyle}
+                className="card"
+                onMouseEnter={(e) => (e.currentTarget.style.transform = cardHoverStyle.transform)}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = 'none')}
+              >
+                <i className={feature.icon} style={iconStyle}></i>
+                <h4 style={titleStyle}>{feature.title}</h4>
+                <p style={textStyle}>{feature.description}</p>
+              </div>
             </div>
-          </div>
-          <div className="col-md-4">
-            <div
-              style={cardStyle}
-              className="card"
-              onMouseEnter={(e) => (e.currentTarget.style.transform = cardHoverStyle.transform)}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = 'none')}
-            >
-              <i className="fas fa-bullhorn" style={iconStyle}></i>
-              <h4 style={titleStyle}>PERFORMANCE TRACKING</h4>
-              {/* <p style={textStyle}>Drive social into the core of the marketing</p> */}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-
-      <div className="col-12">
-          <img 
-            src={ppcservice} 
-            alt="Banner" 
-            className="img-fluid"
-            style={{ height: '', width: '100%' }}
-          />
-        </div>
-        <div className="col-12">
-          <img 
-            src={ppcflow} 
-            alt="Banner" 
-            className="img-fluid"
-            style={{ height: '90%', width: '100%' }}
-          />
-        </div>
+      <div className="col-12 p-0">
+        <img
+          src={ppcservice}
+          alt="Banner"
+          className="img-fluid"
+          style={{ width: '100%' }}
+        />
+      </div>
+      <div className="col-12 p-0">
+        <img
+          src={ppcflow}
+          alt="Banner"
+          className="img-fluid"
+          style={{ width: '100%' }}
+        />
+      </div>
     </>
   );
 };
 
-export default Ppc;
+export default SocialMediaFeatures;

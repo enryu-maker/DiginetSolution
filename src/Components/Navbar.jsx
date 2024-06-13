@@ -1,6 +1,3 @@
-
-
-
 import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -56,17 +53,17 @@ export default function Navbar() {
         <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item" style={{ marginLeft: '0', marginTop: '0.5rem' }}>
-              <NavLink to="/" className="nav-link text-white ms-3" exact activeClassName="active">
+              <NavLink to="/" className="nav-link text-white ms-3" exact activeClassName="active" onClick={handleToggle}>
                 HOME
               </NavLink>
             </li>
             <li className="nav-item" style={{ marginLeft: '0', marginTop: '0.5rem' }}>
-              <NavLink to="/about" className="nav-link text-white ms-3" activeClassName="active">
+              <NavLink to="/about" className="nav-link text-white ms-3" activeClassName="active" onClick={handleToggle}>
                 ABOUT US
               </NavLink>
             </li>
-            <li 
-              className={`nav-item dropdown ${isDropdownOpen ? 'show' : ''}`} 
+            <li
+              className={`nav-item dropdown ${isDropdownOpen ? 'show' : ''}`}
               style={{ marginLeft: '0', marginTop: '0.5rem' }}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
@@ -90,6 +87,7 @@ export default function Navbar() {
                   <NavLink
                     to="/socialmarketing"
                     className="dropdown-item text-white"
+                    activeClassName="active"
                     onClick={handleDropdownItemClick}
                   >
                     SOCIAL MEDIA MARKETING
@@ -99,6 +97,7 @@ export default function Navbar() {
                   <NavLink
                     to="/ppc"
                     className="dropdown-item text-white"
+                    activeClassName="active"
                     onClick={handleDropdownItemClick}
                   >
                     PPC MANAGEMENT
@@ -108,6 +107,7 @@ export default function Navbar() {
                   <NavLink
                     to="/videoservices"
                     className="dropdown-item text-white"
+                    activeClassName="active"
                     onClick={handleDropdownItemClick}
                   >
                     VIDEO MARKETING
@@ -117,6 +117,7 @@ export default function Navbar() {
                   <NavLink
                     to="/contentservices"
                     className="dropdown-item text-white"
+                    activeClassName="active"
                     onClick={handleDropdownItemClick}
                   >
                     CONTENT MARKETING
@@ -126,6 +127,7 @@ export default function Navbar() {
                   <NavLink
                     to="/graphicservices"
                     className="dropdown-item text-white"
+                    activeClassName="active"
                     onClick={handleDropdownItemClick}
                   >
                     GRAPHIC DESIGN
@@ -133,17 +135,9 @@ export default function Navbar() {
                 </li>
                 <li>
                   <NavLink
-                    to="/branding"
-                    className="dropdown-item text-white"
-                    onClick={handleDropdownItemClick}
-                  >
-                    BRANDING
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
                     to="/seoservices"
                     className="dropdown-item text-white"
+                    activeClassName="active"
                     onClick={handleDropdownItemClick}
                   >
                     SEARCH ENGINE OPTIMIZATION
@@ -153,6 +147,7 @@ export default function Navbar() {
                   <NavLink
                     to="/webservices"
                     className="dropdown-item text-white"
+                    activeClassName="active"
                     onClick={handleDropdownItemClick}
                   >
                     WEBSITE DESIGN & DEVELOPMENT
@@ -161,12 +156,12 @@ export default function Navbar() {
               </ul>
             </li>
             <li className="nav-item" style={{ marginLeft: '0', marginTop: '0.5rem' }}>
-              <NavLink to="/portfolio" className="nav-link text-white ms-3" activeClassName="active">
+              <NavLink to="/portfolio" className="nav-link text-white ms-3" activeClassName="active" onClick={handleToggle}>
                 PORTFOLIO
               </NavLink>
             </li>
             <li className="nav-item" style={{ marginLeft: '0', marginTop: '0.5rem' }}>
-              <NavLink to="/contact" className="nav-link text-white ms-3" activeClassName="active">
+              <NavLink to="/contact" className="nav-link text-white ms-3" activeClassName="active" onClick={handleToggle}>
                 CONTACT US
               </NavLink>
             </li>
@@ -185,10 +180,15 @@ export default function Navbar() {
       <style>
         {`
           .nav-link:hover, .dropdown-item:hover {
-            color: #ffc107 !important;
+            color: #FFC107 !important;
+            background-color: transparent !important;
           }
           .dropdown-menu.show {
             display: block;
+          }
+          .dropdown-item.active {
+            color: black !important; 
+            background-color: #FFC107 !important;
           }
         `}
       </style>
