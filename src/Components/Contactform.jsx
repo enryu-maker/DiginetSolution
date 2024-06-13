@@ -48,14 +48,6 @@ export default function Contactform() {
                   1st Floor Office No.6, Jagdish Sankul, KBT Circle, near Wellness Medical, Thatte Nagar, Nashik, Maharashtra 422005
                 </p>
               </div>
-              <div className="col-lg-4 col-md-4 col-sm-12 mb-3 address">
-                <p>
-                  <i className="fa fa-envelope icons text-warning" aria-hidden="true">&nbsp;&nbsp;</i>
-                  <a href="mailto:Sales@spandigitsocial.com"style={{textDecoration:'none', color:'black'}} className="mail_address">
-                    Sales@spandigitsocial.com
-                  </a>
-                </p>
-              </div>
               <div className="col-lg-4 col-md-4 col-sm-12 mb-3 address text-center">
                 <p>
                   <i className="fa-solid fa-phone icons text-warning"></i> &nbsp;India
